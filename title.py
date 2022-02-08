@@ -34,7 +34,7 @@ def url_list(file_name):
         
 def td():
     print(url)
-    pool = threadpool.ThreadPool(10) 
+    pool = threadpool.ThreadPool(50) 
     requests = threadpool.makeRequests(get_title, url)
     [pool.putRequest(req) for req in requests]
     pool.wait()
